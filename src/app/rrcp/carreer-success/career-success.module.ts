@@ -9,12 +9,14 @@ import {
   NbSelectModule,
   NbListModule,
   NbIconModule,
+  NbAlertModule,
 } from '@nebular/theme';
 import { NgxEchartsModule } from 'ngx-echarts';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { CareerSuccessComponent } from './career-success.component';
 import { FormsModule } from '@angular/forms';
+import { StatusCardComponent } from '../../pages/dashboard/status-card/status-card.component';
 
 @NgModule({
   imports: [
@@ -31,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     NbIconModule,
     NbButtonModule,
     NgxEchartsModule,
+    NbAlertModule,
   ],
-  declarations: [CareerSuccessComponent],
+  declarations: [CareerSuccessComponent, StatusCardComponent],
 })
 export class CareerSuccessModule {}

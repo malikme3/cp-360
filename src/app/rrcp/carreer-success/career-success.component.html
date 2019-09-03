@@ -1,7 +1,32 @@
-<nb-card>
-  <nb-card-body class="home-page">
-    <h1>Hello how are you !</h1>
+<div class="lists row">
+  <nb-card size="giant" class="home-page col-md-12 col-lg-12 col-xxxl-12"> </nb-card>
 
-    Welcome from career-success !
-  </nb-card-body>
-</nb-card>
+  <nb-alert>
+    <strong> Wyond!</strong>
+  </nb-alert>
+</div>
+<div class="row">
+  <ng-container *ngIf="devices">
+    <div class="col-xxxl-3 col-md-6" *ngFor="let device of devices">
+      <ngx-status-card
+        [title]="device.name"
+        [on]="device.isOn"
+        [type]="device.settings.type"
+        (statusChanged)="changeDeviceStatus(device, $event)"
+      >
+        <i [ngClass]="device.settings.iconClass"></i>
+      </ngx-status-card>
+    </div>
+
+    <nb-card (click)="onClick()" [ngClass]="{ off: !on }">
+      <div class="icon-container">
+        <div class="icon home-page"></div>
+      </div>
+
+      <div class="details">
+        <div class="title h5">hrq4q34</div>
+      </div>
+      <i [ngClass]="device.settings.iconClass"></i>
+    </nb-card>
+  </ng-container>
+</div>
