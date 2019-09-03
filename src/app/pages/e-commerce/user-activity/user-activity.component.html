@@ -5,7 +5,6 @@
   -->
 
 <nb-card size="medium">
-
   <nb-card-header>
     <span>User Activity</span>
     <nb-select [selected]="type" (selectedChange)="getUserActivity($event); type = $event">
@@ -15,7 +14,6 @@
 
   <nb-list class="user-activity-list">
     <nb-list-item *ngFor="let item of userActivity">
-
       <div class="visited-date">
         {{ item.date }}
       </div>
@@ -32,8 +30,6 @@
           {{ item.newVisits }}%
         </div>
       </div>
-
     </nb-list-item>
   </nb-list>
-
 </nb-card>
