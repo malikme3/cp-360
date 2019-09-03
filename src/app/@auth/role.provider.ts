@@ -17,12 +17,23 @@ export class RoleProvider extends NbRoleProvider {
     super();
   }
 
-  getRole(): Observable<string> {
+  getLowerCaseRoles(roles: any): string | string[] {
+    if (Array.isArray(roles)) {
+      roles = roles.map(element => {
+        return element.toLowerCase();
+      });
+    } else {
+      roles = roles.toLowerCase();
+    }
+    return roles;
+  }
+
+  getRole(): Observable<string | string[]> {
     return this.authService.onTokenChange()
       .pipe(
         map((token: NbAuthJWTToken) => {
           const payload = decodeJwtPayload(token.toString());
-          return !!(token.isValid() && payload && payload['role']) ? payload['role'] : 'guest';
+          return !!(token.isValid() && payload && payload['role']) ? this.getLowerCaseRoles(payload['role']) : 'guest';
         }),
       );
   }

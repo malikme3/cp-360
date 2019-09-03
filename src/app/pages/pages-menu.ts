@@ -12,7 +12,7 @@ import { Injectable } from '@angular/core';
 export class PagesMenu {
 
   getMenu(): Observable<NbMenuItem[]> {
-    const dashboardMenu = [
+    const dashboardMenu: NbMenuItem[] = [
       {
         title: 'E-commerce',
         icon: 'shopping-cart-outline',
@@ -28,7 +28,7 @@ export class PagesMenu {
       },
     ];
 
-    const menu = [
+    const menu: NbMenuItem[] = [
       {
         title: 'FEATURES',
         group: true,

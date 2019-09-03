@@ -7,7 +7,7 @@
 import { Observable } from 'rxjs';
 import { Country } from '../common/countries';
 import { GridData } from '../common/gridData';
-import { DataSource } from 'ng2-smart-table/lib/data-source/data-source';
+import { DataSource } from 'ng2-smart-table/lib/lib/data-source/data-source';
 
 export interface Order {
   id: number;

@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { UsersApi } from '../api/users.api';
 import { UserData, User } from '../../../interfaces/common/users';
-import { DataSource } from 'ng2-smart-table/lib/data-source/data-source';
+import { DataSource } from 'ng2-smart-table/lib/lib/data-source/data-source';
 import { NbAuthService } from '@nebular/auth';
 import { switchMap, map } from 'rxjs/operators';
 
@@ -34,9 +34,9 @@ export class UsersService extends UserData {
           return authenticated ? this.api.getCurrent() : of(null);
         }),
         map(u => {
-        if (u && !u.setting) {
-          u.setting = {};
-        }
+          if (u && !u.setting) {
+            u.setting = {};
+          }
         return u;
       }));
   }

@@ -30,12 +30,7 @@ export function init_app(injector: Injector) {
     new Promise<any>((resolve: Function) => {
       const initUserService = injector.get(InitUserService);
       initUserService.initCurrentUser().subscribe(() => { },
-          error => {
-        if (error.status === 401) {
-          resolve();
-        } else {
-          throw new Error(error);
-        } }, () => resolve());
+        () => resolve(), () => resolve()); // a place for logging error
     });
 }
 

@@ -9,42 +9,36 @@
       Electricity Consumption
     </nb-card-header>
     <nb-tabset fullWidth>
-      <nb-tab *ngFor="let year of listData" [tabTitle]="year.title" [active]="year.active">
-        <nb-list>
-          <nb-list-item *ngFor="let month of year.months">
-            <span class="month">{{ month.month }}</span>
-            <span>
-              <nb-icon
-                [class.down]="month.down"
-                [class.up]="!month.down"
-                [icon]="month.down ? 'arrow-down' : 'arrow-up'"
-                pack="eva"
-              >
-              </nb-icon>
-              {{ month.delta }}
-            </span>
-            <span class="results">
-              {{ month.kWatts }} <span class="caption">kWh</span> / {{ month.cost }} <span class="caption">USD</span>
-            </span>
-          </nb-list-item>
-        </nb-list>
-      </nb-tab>
-    </nb-tabset>
+        <nb-tab *ngFor="let year of listData" [tabTitle]="year.title" [active]="year.active">
+          <nb-list>
+            <nb-list-item *ngFor="let month of year.months">
+              <span class="month">{{ month.month }}</span>
+              <span>
+                <nb-icon
+                  [class.down]="month.down"
+                  [class.up]="!month.down"
+                  [icon]="month.down ? 'arrow-down' : 'arrow-up'" pack="eva">
+                </nb-icon>
+                {{ month.delta }}
+              </span>
+              <span class="results">
+                {{ month.kWatts }} <span class="caption">kWh</span> / {{ month.cost }} <span class="caption">USD</span>
+              </span>
+            </nb-list-item>
+          </nb-list>
+        </nb-tab>
+      </nb-tabset>
   </nb-card>
 
   <nb-card size="large" class="chart-card">
     <nb-card-header>
       <span class="stats">
         <span class="caption">Consumed</span>
-        <span
-          >{{ chartData?.consumed.value }} <span class="caption">{{ chartData?.consumed.title }}</span></span
-        >
+        <span>{{ chartData?.consumed.value }} <span class="caption">{{ chartData?.consumed.title }}</span></span>
       </span>
       <span class="stats">
         <span class="caption">Spent</span>
-        <span
-          >{{ chartData?.spent.value }} <span class="caption">{{ chartData?.spent.title }}</span></span
-        >
+        <span>{{ chartData?.spent.value }} <span class="caption">{{ chartData?.spent.title }}</span></span>
       </span>
 
       <nb-select [(selected)]="type" (selectedChange)="fetchData()" class="type-select">

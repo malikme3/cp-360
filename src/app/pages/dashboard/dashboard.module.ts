@@ -60,6 +60,7 @@ import { AuthModule } from '../../@auth/auth.module';
   ],
   declarations: [
     DashboardComponent,
+    StatusCardComponent,
     TemperatureDraggerComponent,
     ContactsComponent,
     RoomSelectorComponent,
@@ -77,4 +78,4 @@ import { AuthModule } from '../../@auth/auth.module';
     StatusCardPlaceholderComponent,
   ],
 })
-export class DashboardModule {}
+export class DashboardModule { }

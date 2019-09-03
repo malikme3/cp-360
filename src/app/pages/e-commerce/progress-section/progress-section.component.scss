@@ -23,36 +23,4 @@ $shadow-green: #00977e;
   .description {
     margin-top: 0.5rem;
   }
-
-  // TODO: check colors with design system
-
-  .progress-positive /deep/ nb-progress-bar {
-    .progress-container {
-      height: 0.8rem;
-      border-radius: 0;
-    }
-
-    .progress-value {
-      background: nb-theme(progress-bar-background);
-
-      @include nb-for-theme(corporate) {
-        height: 100%;
-      }
-    }
-  }
-
-  .progress-negative /deep/ nb-progress-bar {
-    .progress-container {
-      height: 0.8rem;
-      border-radius: 0;
-    }
-
-    .progress-value {
-      background: nb-theme(progress-bar-warning-background);
-
-      @include nb-for-theme(corporate) {
-        height: 100%;
-      }
-    }
-  }
 }

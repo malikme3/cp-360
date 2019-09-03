@@ -10,19 +10,18 @@ import { AuthGuard } from './@auth/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'pages',
-
-    loadChildren: () => import('app/pages/pages.module').then(m => m.PagesModule),
-  },
-  {
     path: 'rrcp',
     loadChildren: () => import('app/rrcp/rrcp.module').then(m => m.RRCpModule),
+  },
+  {
+    path: 'pages',
+    loadChildren: () => import('app/pages/pages.module').then(m => m.PagesModule),
   },
   {
     path: 'auth',
     loadChildren: () => import('app/@auth/auth.module').then(m => m.AuthModule),
   },
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  { path: '', redirectTo: 'rrcp', pathMatch: 'full' },
   { path: '**', redirectTo: 'pages' },
 ];
 

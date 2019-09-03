@@ -6,6 +6,7 @@
 
 <nb-card size="giant">
   <nb-tabset fullWidth>
+
     <nb-tab tabTitle="Contacts" [nbSpinner]="!contacts">
       <nb-list>
         <nb-list-item class="contact" *ngFor="let c of contacts">
@@ -23,5 +24,6 @@
         </nb-list-item>
       </nb-list>
     </nb-tab>
+
   </nb-tabset>
 </nb-card>
