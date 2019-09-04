@@ -58,6 +58,7 @@ import { AuthModule } from '../../@auth/auth.module';
     NgxEchartsModule,
     AuthModule,
   ],
+  exports: [StatusCardComponent],
   declarations: [
     DashboardComponent,
     StatusCardComponent,
@@ -78,4 +79,4 @@ import { AuthModule } from '../../@auth/auth.module';
     StatusCardPlaceholderComponent,
   ],
 })
-export class DashboardModule { }
+export class DashboardModule {}

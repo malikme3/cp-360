@@ -17,6 +17,7 @@ import { ThemeModule } from '../../@theme/theme.module';
 import { CareerSuccessComponent } from './career-success.component';
 import { FormsModule } from '@angular/forms';
 import { StatusCardComponent } from '../../pages/dashboard/status-card/status-card.component';
+import { DashboardModule } from '../../pages/dashboard/dashboard.module';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { StatusCardComponent } from '../../pages/dashboard/status-card/status-ca
     NbButtonModule,
     NgxEchartsModule,
     NbAlertModule,
+    DashboardModule,
   ],
-  declarations: [CareerSuccessComponent, StatusCardComponent],
+  declarations: [CareerSuccessComponent],
 })
 export class CareerSuccessModule {}

@@ -1,32 +1,18 @@
 <div class="lists row">
-  <nb-card size="giant" class="home-page col-md-12 col-lg-12 col-xxxl-12"> </nb-card>
+  <!-- <nb-card size="giant" class="home-page col-md-12 col-lg-12 col-xxxl-12"> </nb-card> -->
 
-  <nb-alert>
-    <strong> Wyond!</strong>
-  </nb-alert>
-</div>
-<div class="row">
-  <ng-container *ngIf="devices">
-    <div class="col-xxxl-3 col-md-6" *ngFor="let device of devices">
-      <ngx-status-card
-        [title]="device.name"
-        [on]="device.isOn"
-        [type]="device.settings.type"
-        (statusChanged)="changeDeviceStatus(device, $event)"
-      >
-        <i [ngClass]="device.settings.iconClass"></i>
-      </ngx-status-card>
-    </div>
-
-    <nb-card (click)="onClick()" [ngClass]="{ off: !on }">
-      <div class="icon-container">
-        <div class="icon home-page"></div>
+  <nb-card size="giant" class=" home-page ">
+    <ng-container *ngIf="devices">
+      <div class="col-xxxl-3 col-xl-3 col-md-6 col-lg-3" *ngFor="let device of devices">
+        <ngx-status-card
+          [title]="device.name"
+          [on]="device.isOn"
+          [type]="device.settings.type"
+          (statusChanged)="changeDeviceStatus(device, $event)"
+        >
+          <i [ngClass]="device.settings.iconClass"> </i>
+        </ngx-status-card>
       </div>
-
-      <div class="details">
-        <div class="title h5">hrq4q34</div>
-      </div>
-      <i [ngClass]="device.settings.iconClass"></i>
-    </nb-card>
-  </ng-container>
+    </ng-container>
+  </nb-card>
 </div>

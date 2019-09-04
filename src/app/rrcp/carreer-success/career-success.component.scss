@@ -21,7 +21,60 @@
 
 .home-page {
   margin: 0rem;
-  background: url('pic/2336-center.svg');
+  background: url('pic/370.jpg');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.net-work {
+  margin: 0.5rem;
+  background: url('pic/net-work.png');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.resume {
+  margin: 0.5rem;
+  background: url('pic/resume-01.png');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.job {
+  margin: 0.5rem;
+  background: url('pic/hired.png');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.interview {
+  margin: 0.5rem;
+  background: url('pic/interview.png');
 
   width: 100%;
   background-size: cover;

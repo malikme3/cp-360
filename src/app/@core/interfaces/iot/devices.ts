@@ -29,6 +29,7 @@ export interface Device {
 }
 
 export abstract class DevicesData {
+  abstract servicesList(): Observable<Device[]>;
   abstract list(): Observable<Device[]>;
   abstract edit(device: Device): Observable<Device>;
 }
