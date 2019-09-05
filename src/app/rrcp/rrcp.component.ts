@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
-import { MENU_ITEMS } from './rrcp-menu';
+import { MENU_ITEMS, RRCpMenu } from './rrcp-menu';
+import { NbMenuItem } from '@nebular/theme';
+import { NbTokenService } from '@nebular/auth';
+import { InitUserService } from '../@theme/services/init-user.service';
+import { takeWhile } from 'rxjs/operators';
 
 @Component({
   selector: 'rrcp-pages',
@@ -12,6 +16,35 @@ import { MENU_ITEMS } from './rrcp-menu';
     </ngx-one-column-layout>
   `,
 })
-export class RRCpComponent {
-  menu = MENU_ITEMS;
+export class RRCpComponent implements OnDestroy {
+  menu: NbMenuItem[];
+  alive: boolean = true;
+
+  constructor(
+    private rrcpMenu: RRCpMenu,
+    private tokenService: NbTokenService,
+    protected initUserService: InitUserService,
+  ) {
+    this.initMenu();
+
+    this.tokenService
+      .tokenChange()
+      .pipe(takeWhile(() => this.alive))
+      .subscribe(() => {
+        this.initMenu();
+      });
+  }
+
+  initMenu() {
+    this.rrcpMenu
+      .getMenu()
+      .pipe(takeWhile(() => this.alive))
+      .subscribe(menu => {
+        this.menu = menu;
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.alive = false;
+  }
 }
