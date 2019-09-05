@@ -1,9 +1,9 @@
 <div class="lists row">
   <!-- <nb-card size="giant" class="home-page col-md-12 col-lg-12 col-xxxl-12"> </nb-card> -->
 
-  <nb-card size="giant" class=" home-page ">
+  <nb-card size="giant" class="home-page">
     <ng-container *ngIf="devices">
-      <div class="col-xxxl-3 col-xl-3 col-md-6 col-lg-3" *ngFor="let device of devices">
+      <div class="home-page" *ngFor="let device of devices">
         <ngx-status-card
           [title]="device.name"
           [on]="device.isOn"

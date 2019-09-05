@@ -16,8 +16,35 @@
     .icon-container {
       height: 100%;
       padding: 0.625rem;
+      background: url('../../../rrcp/carreer-success/pic/370.jpg');
+    }
+    .net-work {
+      margin: 0.5rem;
+      background: url('../../../rrcp/carreer-success/pic/370.jpg');
+
+      width: 100%;
+      background-size: cover;
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
+    .home-page {
+      margin: 0rem;
+      background: url('../../../rrcp/carreer-success/pic/363.jpg');
+
+      width: 100%;
+      background-size: cover;
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
     .icon {
       display: flex;
       align-items: center;
