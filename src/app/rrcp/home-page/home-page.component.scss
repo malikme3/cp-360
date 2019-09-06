@@ -20,7 +20,7 @@
 }
 
 .home-page {
-  background: url('pic/19366.jpg');
+  background: url('pic/h-laptop.svg');
 
   width: 100%;
   background-size: cover;
@@ -28,6 +28,16 @@
 
   /* Center and scale the image nicely */
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  background-repeat: repeat;
+}
+
+.card-bck {
+  color: whitesmoke;
+  align-content: center;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.1375rem;
+  font-weight: 1000;
+  line-height: 1.5rem;
+  background-color: rgb(12, 40, 68);
 }
