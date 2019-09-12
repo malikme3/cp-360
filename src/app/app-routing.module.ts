@@ -10,10 +10,12 @@ import { AuthGuard } from './@auth/auth.guard';
 
 const routes: Routes = [
   {
+    canActivate: [AuthGuard],
     path: 'rrcp',
     loadChildren: () => import('app/rrcp/rrcp.module').then(m => m.RRCpModule),
   },
   {
+    canActivate: [AuthGuard],
     path: 'pages',
     loadChildren: () => import('app/pages/pages.module').then(m => m.PagesModule),
   },
