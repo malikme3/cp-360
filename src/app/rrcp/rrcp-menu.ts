@@ -8,8 +8,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
   },
 ];
 
-
-
 import { NbMenuItem } from '@nebular/theme';
 import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -26,10 +24,44 @@ export class RRCpMenu {
         children: undefined,
       },
       {
+        title: 'User',
+        icon: 'people-outline',
+        link: '/pages/users/current',
+        home: true,
+        children: undefined,
+      },
+
+      {
         title: 'JOB Help',
         icon: 'keypad-outline',
         link: '/rrcp/career-success',
         children: undefined,
+      },
+      {
+        title: 'Auth',
+        icon: 'lock-outline',
+        children: [
+          {
+            title: 'Login',
+            link: '/auth/login',
+          },
+          {
+            title: 'Register',
+            link: '/auth/register',
+          },
+          {
+            title: 'Request Password',
+            link: '/auth/request-password',
+          },
+          {
+            title: 'Reset Password',
+            link: '/auth/reset-password',
+          },
+          {
+            title: 'Logout',
+            link: '/auth/logout',
+          },
+        ],
       },
     ];
 
